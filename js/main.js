@@ -5,5 +5,6 @@ var videos = [
 ];
 
 var renderVideoList = function () {
-  // TODO
+  for (var i = 0; i >= videos.length; i += 1) do |i|
+  	
 };
