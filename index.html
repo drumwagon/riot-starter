@@ -4,24 +4,25 @@
   <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 <body>
-<div id="templates">
-  <script class="video-list-item" type="text/template">
-    <div = 'video-list-item'>
-      <h3 id = 'vid-item'>{title}</h3>
-    </div>
-  </script>
 
-</div>
 <div id="video-display"></div>
 <div id="video-list"></div>
 
-<form id="new-video">
-  <!-- TODO: 2 inputs, 1 button -->
+<form id="newVideo" method="post">
+  	<label for="title">Title:</label></br>
+  	<input type="text" name="title"></br>
+  	<label for="youtubeId">Youtube ID:</label></br>
+  	<input type="text" name="youtubeId"></br>
+	<input type="button" onClick="newVideo()" value="Add Video">
 </form>
 
-
+<div id="vid-item" action=""></div>
 <div id="templates">
-  <!-- TODO: video-list-item template -->
+  <script class="video-list-item" type="text/template">
+    <div class="video-list-item">
+      <a href="https://www.youtube.com/watch?v={ youtubeId }"><h3>{ title } </h3></a>
+    </div>
+  </script>
 </div>
 
 <script src="vendor/js/jquery-1.10.2.min.js"></script>
