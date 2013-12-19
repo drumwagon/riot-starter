@@ -5,8 +5,11 @@ var videos = [
 ];
 
 var itemTemplate = $('#templates .video-list-item').html();
-
-var newVideo = videos.push(newVideo);
+$('.submit').on('click', function () {
+	$('.name').val()
+})
+var vidObject = {}
+var newVideo = videos.push(vidObject);
 
 for (var i = 0; i < videos.length; i += 1){
   var video = videos[i];
