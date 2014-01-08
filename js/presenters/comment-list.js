@@ -6,13 +6,14 @@
 
     var $root = options.root;
     var comments = options.comments;
+    
 
       // // // // // // //
      // View Listeners //
     // // // // // // //
 
     $root.on('click', '.like', function (e) {
-      e.preventDefault();
+      event.preventDefault();
       var id = $(this).closest('.comment').data('id');
       comments.like(id);
     });

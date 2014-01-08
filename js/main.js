@@ -1,4 +1,4 @@
-(function () {
+(function () {  
 
   var pet1 = new PetPresenter({
     title: "Who, me? Couldn't be",

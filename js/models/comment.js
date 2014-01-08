@@ -19,7 +19,8 @@
     // The "private" variable
     var comments = [];
     var index = 0;
-
+    var commentCount = 0;
+    // var totalLikeCount = 0;
     $.observable(this);
 
     // CRUD type functions
@@ -35,10 +36,18 @@
       var index = getIdIndexOf(comments, id);
       var comment = comments[index];
       comment.likes += 1;
+      // totalLikeCount += 1;
       // this tells the presenter - Hey! This add thing just happened in the model
       this.trigger("like", comment);
-      console.log("The like property in comment model has this comment: ", comment);
+      // console.log("The like property in comment model has this comment: ", comment);
+      // console.log("Total likes: " + totalLikeCount)
     };
+
+    // Count total of comment likes
+    // var totalLikes = function() {
+    //   comments.each do |comment|
+    //   comment.likes
+    // };
 
   };
 
